@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=WDXL+Lubrifont+TC&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kodchasan", sans-serif;
+}
+
+body {
+    background-color: #412890;
+}
+
+header {
+    background-color: #520167;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    gap: 20px;
+
+    position: fixed;     /* Novo: fixa o header no topo */
+    top: 0;              /* Alinha no topo da página */
+    left: 0;
+    width: 100%;
+    z-index: 1000;       /* Garante que fique sobreposto ao conteúdo */
+    height: 100px;       /*Defina a altura para ajustar o espaçamento do body */
+    
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: smaller;
+    font-family: "Kodchasan", sans-serif;
+    font-weight:500;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="search"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-family: "Kodchasan", sans-serif;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #b144a8;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: smaller;
+    transition: background-color 0.3s;
+    font-family: "Kodchasan", sans-serif;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.1);
+}
+
+#sobre-a-loja h2, p {
+    color: #fff;
+    
+}
+
+#sobre-a-loja {
+    padding: 120px 40px 60px;
+    /* background-color: #4700A3; */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Ajuda no mobile */
+}
+
+.container-flex img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.container-flex div {
+    flex: 1;
+    min-width: 300px;
+}
+
+.container-flex h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: "Kodchasan", sans-serif;
+}
+
+.container-flex p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: "Kodchasan", sans-serif;
+}
+
+.logos-marcas {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.logos-marcas img {
+    width: 40px;     /* Tamanho pequeno */
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.logos-marcas img:hover {
+    transform: scale(1.1); /* Efeito sutil ao passar o mouse */
+}
+
+.grid-jogos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+}
+
+.grid-jogos li {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #2d0080;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.grid-jogos li:hover {
+    transform: translateY(-5px);
+}
+
+.grid-jogos img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.grid-jogos h3 {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.grid-jogos p {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.grid-jogos strong {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.grid-jogos button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    border: none;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.grid-jogos button:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.1);
+}
+
+.grid-jogos p .disponivel {
+    font-size: 0.9rem;
+    text-align: center;
+    color:green;
+}  
+
+.container h2 {
+    color: #fff;
+}
+
+.card-produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.descricao-wrapper {
+    flex-grow: 1;
+}
+
+.info-final {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column; /* <- Faz os itens ficarem um abaixo do outro */
+    align-items: center;
+    gap: 10px;
+}
+
+.disponivel{
+    color: green;
+}
+
+footer div {
+    background-color: #2d0080;
+    border-top: 1px solid #fff;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-weight: 300;
+    color: #fff;
+}
+
+/* Submenu oculto por padrão */
+.submenu-horizontal  {
+    display: none;
+    position: absolute;
+    top: 100%; /* abaixo do item principal */
+    left: 0;
+    background-color: #520167;
+    padding: 20px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+.submenu-horizontal li {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.submenu-horizontal li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.submenu-horizontal li a:hover {
+    color: #ccc;
+}
+
+/* Exibe o submenu ao passar o mouse */
+.menu-dropdown {
+    position: relative;
+}
+
+.menu-dropdown:hover .submenu-horizontal {
+    display: block;
+}
+
+@media (min-width: 0px) and (max-width: 773px) {
+    .pesquisar-mobile {
+        display: none;
+    }
+    
+    .submenu-horizontal {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #520167;
+        padding: 10px 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        z-index: 1000;
+
+        /* layout em coluna */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .menu-dropdown:hover .submenu-horizontal {
+        display: flex;
+    }
+
+    .submenu-horizontal li {
+        width: 100%;
+        text-align: left;
+        padding: 5px 20px;
+    }
+
+    .submenu-horizontal li a:hover {
+        background-color: #8a2be2;
+    }
+
+    .logos-marcas {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.container h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+}
+@media (min-width:773px) and (max-width: 860px) {
+    .submenu-horizontal {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #520167;
+        padding: 10px 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        z-index: 1000;
+
+        /* layout em coluna */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .menu-dropdown:hover .submenu-horizontal {
+        display: flex;
+    }
+
+    .submenu-horizontal li {
+        width: 100%;
+        text-align: left;
+        padding: 5px 20px;
+    }
+
+    .submenu-horizontal li a:hover {
+        background-color: #8a2be2;
+    }
+
+    .logos-marcas {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    text-align: center;
+}
+
+    .container h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+}
+
+@media (min-width:861px) and (max-width: 932px){
+
+    .logos-marcas {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    text-align: center;
+}
+    .container h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+}
+
+@media (min-width:933px) and (max-width: 943px){
+
+.logos-marcas {
+    display: flex;
+    gap: 45px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+}
+
+
