@@ -9,11 +9,13 @@
 <body>
 <header>
     <img src="./img/logo-cloudplay.png" width="85" height="85" alt="logo da CloudPlay">
-
+    <button class="menu-toggle" aria-label="Abrir menu">
+    ☰
+</button>
 <nav>
     <ul>
     <li class="menu-dropdown">
-        <a href="#jogos-pc">Jogos para computador</a>
+        <a href="#jogos-pc" class="dropdown-toggle">Jogos para computador</a>
         <ul class="submenu-horizontal">
         <li><a href="#jogos">Ação</a></li>
         <li><a href="#jogos">Aventura</a></li>
@@ -24,7 +26,7 @@
         </ul>
     </li>
     <li class="menu-dropdown">
-        <a href="#jogos-console">Jogos para console</a>
+        <a href="#jogos-console" class="dropdown-toggle">Jogos para console</a>
         <ul class="submenu-horizontal">
         <li><a href="#ps5">PS5</a></li>
         <li><a href="#xbox">Xbox</a></li>
@@ -33,7 +35,7 @@
         </ul>
     </li>
     <li class="menu-dropdown">
-        <a href="#cloud">Jogue na nuvem</a>
+        <a href="#cloud" class="dropdown-toggle">Jogue na nuvem</a>
         <ul class="submenu-horizontal">
         <li><a href="#xcloud">Xbox Cloud</a></li>
         <li><a href="#geforce">GeForce Now</a></li>
@@ -44,6 +46,8 @@
     <li><a href="#sobre-a-loja">Sobre nós</a></li>
     </ul>
 </nav>
+
+
 
 
     <form class="pesquisar-mobile">
@@ -216,6 +220,13 @@
         <span>Todos os direitos reservados a Cloudplay Games desde 2025</span>
     </div>
     </footer>
+<script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
 
+    toggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    });
+</script>
 </body>
 </html>
