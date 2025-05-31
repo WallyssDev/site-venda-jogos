@@ -302,11 +302,13 @@ footer div {
     cursor: pointer;
 }
 
-@media (min-width: 0px) and (max-width: 773px) {
+/* Mobile */
+
+@media (max-width: 1070px) {
     .pesquisar-mobile {
         display: none;
     }
-    
+
     .submenu-horizontal {
         display: none;
         position: absolute;
@@ -318,7 +320,6 @@ footer div {
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         z-index: 1000;
 
-        /* layout em coluna */
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
@@ -339,120 +340,31 @@ footer div {
     }
 
     .logos-marcas {
-    display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    text-align: center;
-}
-
-.container h2 {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 20px;
-}
-}
-@media (min-width:773px) and (max-width: 860px) {
-    .submenu-horizontal {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #520167;
-        padding: 10px 0;
-        border-radius: 6px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        z-index: 1000;
-
-        /* layout em coluna */
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .menu-dropdown:hover .submenu-horizontal {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        text-align: center;
     }
-
-    .submenu-horizontal li {
-        width: 100%;
-        text-align: left;
-        padding: 5px 20px;
-    }
-
-    .submenu-horizontal li a:hover {
-        background-color: #8a2be2;
-    }
-
-    .logos-marcas {
-    display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    text-align: center;
-}
 
     .container h2 {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.menu-toggle {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1100;
-}
-
-nav {
-    display: none; /* Oculta a navegação inicialmente */
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-}
-
-nav.open {
-  display: flex; /* Exibe quando classe 'open' for adicionada */
-}
-
-}
-
-@media (min-width:375px) and (max-width:860px){
-    .logos-marcas {
-        display: flex;
-        gap: 39px;
-        margin-top: 30px;
-        flex-wrap: wrap;
-        
-    }
-
-    .submenu-horizontal {
-        display: none;
-        flex-direction: column;
-        gap: 8px;
-        padding-left: 15px;
-    }
-
-    .menu-dropdown.open .submenu-horizontal {
-        display: flex;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     nav {
         display: none;
         position: absolute;
-        top: 100%; /* Coloca o menu logo abaixo do header */
+        top: 100%;
         left: 0;
         right: 0;
         background-color: #412890;
         padding: 16px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        z-index: 9;/
+        z-index: 9;
     }
 
     nav.open {
@@ -494,19 +406,19 @@ nav.open {
     }
 
     #sobre-a-loja {
-    padding: 20px 40px 60px;
-}
+        padding: 20px 40px 60px;
+    }
 
-footer div {
-    background-color: #2d0080;
-    border-top: 1px solid #fff;
-    width: 100%;
-    height: 40px;
-    text-align: center;
-    font-weight: 300;
-    color: #fff;
+    footer div {
+        background-color: #2d0080;
+        border-top: 1px solid #fff;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        font-weight: 300;
+        color: #fff;
+    }
 }
-
 
 
 
@@ -540,4 +452,3 @@ footer div {
 }
 
 
-}
